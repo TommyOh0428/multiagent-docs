@@ -67,21 +67,38 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "My Site",
+      title: "Multiagent-Docs",
       logo: {
-        alt: "My Site Logo",
+        alt: "Multiagent-Docs Logo",
         src: "img/logo.svg",
       },
       items: [
         {
           type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          sidebarId: "researchSidebar",
           position: "left",
-          label: "Tutorial",
+          label: "Research",
         },
-        { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          type: "docSidebar",
+          sidebarId: "version1Sidebar",
+          position: "left",
+          label: "v1.0",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "version2Sidebar",
+          position: "left",
+          label: "v2.0 (WIP)",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "version3Sidebar",
+          position: "left",
+          label: "v3.0 (under development)",
+        },
+        {
+          href: "https://github.com/TommyOh0428/multiagent-docs",
           label: "GitHub",
           position: "right",
         },
@@ -125,12 +142,12 @@ const config: Config = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/TommyOh0428/multiagent-docs",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Multiagent-bot & Multiagent-docs. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
