@@ -1,0 +1,22 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: local
+    hooks:
+      - id: prettier
+        name: Prettier
+        entry: yarn prettier --write
+        language: system
+        files: \.(css|js|jsx|json|md|mdx|ts|tsx|yaml|yml)$
+      - id: typescript
+        name: TypeScript typecheck
+        entry: yarn typecheck --pretty false
+        language: system
+        pass_filenames: false
+        files: \.(ts|tsx)$
